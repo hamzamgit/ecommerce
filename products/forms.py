@@ -14,9 +14,10 @@ class RatingModelForm(forms.ModelForm):
         for field in self.fields.values():
             field.widget.attrs['class'] = 'form-control'
 
-        self.fields['rating_rating'] = forms.ChoiceField(choices=self.CHOICES, widget=forms.RadioSelect())
+        self.fields['rating_rating'] = forms.ChoiceField(choices=self.CHOICES, widget=forms.RadioSelect(
+            attrs={'required': True}))
 
     class Meta:
         model = RatingAndReviewModel
-        fields = ['rating_title', 'rating_review', 'rating_rating', 'rating_user']
-
+        fields = ['rating_title', 'rating_review', 'rating_rating', 'rating_user', 'rating_time']
+        exclude = ['rating_time']

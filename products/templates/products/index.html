@@ -21,8 +21,9 @@
                     </div>
                     <div class="carousel-caption carousel-caption-left">
                         <div class="container">
-                            <h3 class="title m-b-5 fadeInLeftBig animated">{{ b.banner_title }}</h3>
-                            <p class="m-b-15 fadeInLeftBig animated">{{ b.banner_description }}</p>
+                            <h3 class="title m-b-5 fadeInLeftBig animated"><span class="span" >{{ b.banner_title }}</span></h3>
+
+                            <p class="m-b-15 fadeInLeftBig animated"><span class="span" >{{ b.banner_description }}</span></p>
                             <div class="price m-b-30 fadeInLeftBig animated">
                                 <a href="#" class="btn btn-outline btn-lg fadeInLeftBig animated">Visit</a>
                             </div>
@@ -248,7 +249,6 @@
                         <div id="product_container" class="item-row">
                             {% for p in products %}
                                 <div class="item item-thumbnail">
-
                                     <a href="{% url "products:product_detail" pk=p.pk %}" class="item-image">
                                         <img src="{% get_media_prefix %}{{ p.product_image }}" alt=""/>
                                         <div class="discount">{{ p|calculate_discount }} OFF</div>

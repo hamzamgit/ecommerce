@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <title>{% block title %} Title {% endblock %} </title>
 
+
     <!-- ================== BEGIN BASE CSS STYLE ================== -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link href="{% static 'products/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
     <link href="{% static 'products/plugins/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"/>
     <link href="{% static 'products/css/style.min.css' %}" rel="stylesheet"/>
@@ -22,11 +22,7 @@
     <!-- ================== END BASE CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
-    <script src="{% static 'products/plugins/pace/pace.min.js' %}"></script>
-
     <!-- ================== END BASE JS ================== -->
-    {% block javascriptload %}
-    {% endblock %}
 
 </head>
 <body>
@@ -502,16 +498,27 @@
 </div>
 <!-- END #footer-copyright -->
 
+
 <!-- ================== BEGIN BASE JS ================== -->
-<script src="{% static 'products/plugins/jquery/jquery-1.9.1.min.js' %}    "></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
 <script src="{% static 'products/plugins/jquery/jquery-migrate-1.1.0.min.js' %}"></script>
 <script src="{% static 'products/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
 <script src="{% static 'products/crossbrowserjs/html5shiv.js' %}"></script>
 <script src="{% static 'products/crossbrowserjs/respond.min.js' %}"></script>
 <script src="{% static 'products/crossbrowserjs/excanvas.min.js' %}"></script>
+<script src="{% static 'products/crossbrowserjs/excanvas.min.js' %}"></script>
+
 <![endif]-->
 <script src="{% static 'products/plugins/jquery-cookie/jquery.cookie.js' %}"></script>
 <script src="{% static 'products/js/apps.min.js' %}"></script>
+
+   {% block javascriptload %}
+
+    {% endblock %}
 
 
 <!-- ================== END BASE JS ================== -->

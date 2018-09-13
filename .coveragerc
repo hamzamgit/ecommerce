@@ -1,0 +1,6 @@
+[run]
+omit =
+    */venvs/*
+    */migrations/*
+    */tests/*
+    */python3/*

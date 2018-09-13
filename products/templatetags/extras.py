@@ -10,10 +10,10 @@ def calculate_discount(p):
     return '{}%'.format((discount).__round__(1))
 
 
-@register.filter()
-def calculate_discount2(p):
-    return '{}%'.format((p[1] * 100 / p[0]).__round__(1))
-    # return '{}%'.format((d * 100 / p).__round__(1))
+# @register.filter()
+# def calculate_discount2(p):
+#     return '{}%'.format((p[1] * 100 / p[0]).__round__(1))
+#     # return '{}%'.format((d * 100 / p).__round__(1))
 
 
 @register.filter()
@@ -32,8 +32,9 @@ def is_even(a):
 
 
 @register.filter()
-def get_filtered_products(name):
-    return ProductModel.product_company.objects.filter(company_name=name)
+def get_filtered_products(name: str):
+    # return ProductModel.product_company.objects.filter(company_name=name)
+    return ProductModel.objects.filter(product_company__company_name=name)
 
 
 @register.filter()

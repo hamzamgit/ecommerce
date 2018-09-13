@@ -6,6 +6,8 @@
 {% endblock %}
 
 {% block content %}
+
+
     <div id="product" class="section-container p-t-20">
         <!-- BEGIN container -->
         <div class="container">
@@ -45,7 +47,9 @@
                         <!-- END product-thumbnail -->
                         <!-- BEGIN product-main-image -->
                         <div class="product-main-image" data-id="main-image">
-                            <img src="{{ product.product_image.url }}" alt=""/>
+                        <img src="{% if product.product_image %}{{ product.product_image.url }}
+                            {% else  %}{% static 'products/img/test.png' %}{% endif %}
+                        " alt=""/>
                         </div>
                         <!-- END product-main-image -->
                     </div>
@@ -134,20 +138,25 @@
                                     <!-- BEGIN product-desc -->
                                     <div class="product-desc">
                                         <div class="image">
-                                            <img src="{% get_media_prefix %}{{ c.detail_image }}" alt=""/>
+                                            <img src="
+                                            {% if c.detail_image %}{{ c.detail_image.url }}
+                                            {% else  %}{% static 'products/img/test.png' %}{% endif %}
+                                            " alt=""/>
                                         </div>
                                         <div class="desc">
                                             <h4>iPhone 6s</h4>
                                             <p>{{ c.detail_description }}</p>
                                         </div>
                                     </div>
-                                    <!-- END product-desc -->s
+                                    <!-- END product-desc -->
                                 {% else %}
                                     <!-- BEGIN product-desc -->
                                     <div class="product-desc right">
                                         <div class="image">
-                                            <img src="{% get_media_prefix %}{{ c.detail_image }}" alt=""/>
-                                        </div>
+                                            <img src="
+                                            {% if c.detail_image %}{{ c.detail_image.url }}
+                                            {% else  %}{% static 'products/img/test.png' %}{% endif %}
+                                        " alt=""/></div>
                                         <div class="desc">
                                             <h4>iPhone 6s</h4>
                                             <p>{{ c.detail_description }}</p>
@@ -305,7 +314,7 @@
                                                     </ul>
                                                     ({{ i.rating_rating }}/5)
                                                 </div>
-                                                <div class="review-name">{{ i.rating_user.username }}</div>
+                                                <div class="review-name rating-username">{{ i.rating_user.username }}</div>
                                                 <div class="review-date">{{ i.rating_time }}</div>
                                             </div>
                                             <div class="review-title">{{ i.rating_title }} </div>
@@ -318,29 +327,47 @@
                                 <!-- BEGIN col-5 -->
                                 <div class="col-md-5">
                                     <!-- BEGIN review-form -->
+
+                                {% if messages %}
+                                <div id="alert" class="alert" >
+                                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                    {% for message in messages %}
+                                    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+
                                     <div class="review-form">
-                                        <form name="review_form" method="POST">
+                                        <form id="rating-form" name="review_form" method="POST" novalidate
+                                              action="{% url 'products:product_detail' product.id  %}?active_tab=error" >
+
                                             {% csrf_token %}
                                             <h2>Write a review</h2>
 
                                                 {{ form.rating_user }}
-                                                {% for error in form.rating_user.errors %}
-                                                {{ error }}
-                                                {% endfor %}
+                                                <div class = error>
+                                                        {% for error in form.rating_user.errors %}
+                                                        {{ error }}
+                                                        {% endfor %}
+                                                </div>
+
                                                 <br>
                                                 <label for="id_rating_title">Title <span class="text-danger">*</span></label>
                                                 {{ form.rating_title }}
+                                                <div class = error>
                                                 {% for error in form.rating_title.errors %}
                                                 {{ error }}
-                                                {% endfor %}
+                                                {% endfor %}</div>
                                                <br>
                                                 <div class="form-group">
                                                     <label for="review">Review <span class="text-danger">*</span></label>
 
                                                     {{ form.rating_review }}
+                                                <div class = error>
                                                     {% for error in form.rating_review.errors %}
                                                     {{ error }}
                                                     {% endfor %}
+                                                </div>
                                                     <br>
                                                 </div>
                                                 <div class="form-group">
@@ -349,14 +376,24 @@
                                                 <div class="form-group">
                                                     <label id="rating-label" for="rating">Rating <span class="text-danger">* : &nbsp;&nbsp;</span></label>
                                                     {{ form.rating_rating }}
-{#                                                    {% for error in form.rating_rating.errors %}#}
-{#                                                    {{ error }}#}
-{#                                                    {% endfor %}#}
-                                                    <div id="rating_error"></div>
+                                                    <div class = error>
+                                                        {% for error in form.rating_rating.errors %}
+                                                        {{ error }}
+                                                        {% endfor %}
+                                                    </div>
+                                                    <div id="rating_error">
+
+                                                    </div>
 
                                                 </div>
-                                                <button id="rating_submit" type="submit" class="btn btn-inverse btn-lg">Submit Review
-                                                </button>
+                                                <p>
+                                                    <button id="rating_submit" type="submit"  class="btn btn-inverse btn-lg has-spinner">
+                                                            <span class="spinner"><i class="fa fa-refresh fa-spin">
+                                                            </i></span> Submit Review
+                                                    </button>
+                                                </p>
+{#                                                <button id="rating_submit" type="submit" class="btn btn-inverse btn-lg">Submit Review#}
+{#                                                </button>#}
                                         </form>
                                     </div>
                                     <!-- END review-form -->
@@ -382,7 +419,10 @@
                     <div class="item item-thumbnail">
 
                         <a href="{% url "products:product_detail" pk=p.pk %}" class="item-image">
-                            <img src="{% get_media_prefix %}{{ p.product_image }}" alt=""/>
+                            <img src="
+                            {% if p.product_image %}{{ p.product_image.url }}
+                            {% else  %}{% static 'products/img/test.png' %}{% endif %}
+                            " alt=""/>
                             <div class="discount">{{ p|calculate_discount }} OFF</div>
                         </a>
                         <div class="item-info">
@@ -404,4 +444,3 @@
 
 {% block javascriptload %}
     <script src="{% static 'products/js/scripts.js' %}"></script>
-{% endblock %}

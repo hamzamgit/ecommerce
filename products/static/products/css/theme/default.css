@@ -62,3 +62,78 @@ a:focus {
     float: left;
 }
 
+.notification{
+    align-self: center;
+    color: #0f0f0f;
+    text-align: center;
+    background-color: rgba(255,25,255,0.5);
+    position: fixed;
+    height: 10%;
+    border-radius: 20%;
+    display: inline-block;
+    width: 50%;
+    font-size: 30px;
+}
+
+.span{
+    /*background-color: rgba(0,0,0,0.4);*/
+    display: block;
+    width: 60%;
+}
+
+
+.alert{
+    padding: 20px;
+    text-align: center;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.closebtn{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: #000000;
+}
+
+
+.error{
+    color: #ff4400;
+}
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  max-width: 0;
+  -webkit-transition: opacity 0.25s, max-width 0.45s;
+  -moz-transition: opacity 0.25s, max-width 0.45s;
+  -o-transition: opacity 0.25s, max-width 0.45s;
+  transition: opacity 0.25s, max-width 0.45s;
+  /* Duration fixed since we animate additional hidden width */
+}
+
+.has-spinner.active {
+  cursor: progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  max-width: 90px;
+  /* More than it will ever come, notice that this affects on animation duration */
+}
+
+.rating-username{
+    display: block;
+    width: 60%;
+
+}
