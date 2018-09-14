@@ -1,0 +1,583 @@
+{% extends 'products/base.html' %}
+{% load static %}
+{% load extras %}
+
+{% block content %}
+
+    <!-- BEGIN #slider -->
+    <div id="slider" class="section-container p-0 bg-black-darker">
+    <!-- BEGIN carousel -->
+    <div id="main-carousel" class="carousel slide" data-ride="carousel">
+        <!-- BEGIN carousel-inner -->
+        <div class="carousel-inner">
+            {% for b in banner %}
+                <!-- BEGIN item -->
+                <div class="item {% if forloop.counter == 1 %}active{% endif %}">
+                    <img src="{% get_media_prefix %}{{ b.banner_background_image }}" class="bg-cover-img" alt=""/>
+                    <div class="container">
+                        <img src="{% get_media_prefix %}{{ b.banner_image }}"
+                             class="product-img right bottom fadeInRight animated"
+                             alt=""/>
+                    </div>
+                    <div class="carousel-caption carousel-caption-left">
+                        <div class="container">
+                            <h3 class="title m-b-5 fadeInLeftBig animated"><span class="span" >{{ b.banner_title }}</span></h3>
+
+                            <p class="m-b-15 fadeInLeftBig animated"><span class="span" >{{ b.banner_description }}</span></p>
+                            <div class="price m-b-30 fadeInLeftBig animated">
+                                <a href="#" class="btn btn-outline btn-lg fadeInLeftBig animated">Visit</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END item -->
+                </div>
+                <!-- END carousel-inner -->
+            {% endfor %}
+            <a class="left carousel-control" href="#main-carousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="right carousel-control" href="#main-carousel" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+        <!-- END carousel -->
+    </div>
+    <!-- END #slider -->
+
+
+    <!-- BEGIN #promotions -->
+    <div id="promotions" class="section-container bg-white">
+        <!-- BEGIN container -->
+        <div class="container">
+            <!-- BEGIN section-title -->
+            <h4 class="section-title clearfix">
+                <a href="#" class="pull-right">SHOW ALL</a>
+                Exclusive promotions
+                <small>from 25 September 2016 - 1 January 2017</small>
+            </h4>
+            <!-- END section-title -->
+            <!-- BEGIN row -->
+            <div class="row row-space-10">
+                <!-- BEGIN col-6 -->
+                <div class="col-md-6">
+                    <!-- BEGIN promotion -->
+                    <div class="promotion promotion-lg bg-black-darker">
+                        <div class="promotion-image text-right promotion-image-overflow-bottom">
+                            <img src="{% static 'products/img/iphone-se.png' %}" alt=""/>
+                        </div>
+                        <div class="promotion-caption promotion-caption-inverse">
+                            <h4 class="promotion-title">iPhone SE</h4>
+                            <div class="promotion-price">
+                                <small>from</small>
+                                $299.00
+                            </div>
+                            <p class="promotion-desc">A big step for small.<br/>A beloved design. Now with more to love.
+                            </p>
+                            <a href="#" class="promotion-btn">View More</a>
+                        </div>
+                    </div>
+                    <!-- END promotion -->
+                </div>
+                <!-- END col-6 -->
+                <!-- BEGIN col-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <!-- BEGIN promotion -->
+                    <div class="promotion bg-blue">
+                        <div class="promotion-image promotion-image-overflow-bottom promotion-image-overflow-top">
+                            <img src="{% static 'products/img/apple-watch-sm.png' %}" alt=""/>
+                        </div>
+                        <div class="promotion-caption promotion-caption-inverse text-right">
+                            <h4 class="promotion-title">Apple Watch</h4>
+                            <div class="promotion-price">
+                                <small>from</small>
+                                $299.00
+                            </div>
+                            <p class="promotion-desc">You. At a glance.</p>
+                            <a href="#" class="promotion-btn">View More</a>
+                        </div>
+                    </div>
+                    <!-- END promotion -->
+                    <!-- BEGIN promotion -->
+                    <div class="promotion bg-silver">
+                        <div class="promotion-image text-center promotion-image-overflow-bottom">
+                            <img src="{% static 'products/img/mac-mini.png' %}" alt=""/>
+                        </div>
+                        <div class="promotion-caption text-center">
+                            <h4 class="promotion-title">Mac Mini</h4>
+                            <div class="promotion-price">
+                                <small>from</small>
+                                $199.00
+                            </div>
+                            <p class="promotion-desc">It’s mini in a massive way.</p>
+                            <a href="#" class="promotion-btn">View More</a>
+                        </div>
+                    </div>
+                    <!-- END promotion -->
+                </div>
+                <!-- END col-3 -->
+                <!-- BEGIN col-3 -->
+                <div class="col-md-3 col-sm-6">
+                    <!-- BEGIN promotion -->
+                    <div class="promotion bg-silver">
+                        <div class="promotion-image promotion-image-overflow-right promotion-image-overflow-bottom text-right">
+                            <img src="{% static 'products/img/mac-accessories.png' %}" alt=""/>
+                        </div>
+                        <div class="promotion-caption text-center">
+                            <h4 class="promotion-title">Apple Accessories</h4>
+                            <div class="promotion-price">
+                                <small>from</small>
+                                $99.00
+                            </div>
+                            <p class="promotion-desc">Redesigned. Rechargeable. Remarkable.</p>
+                            <a href="#" class="promotion-btn">View More</a>
+                        </div>
+                    </div>
+                    <!-- END promotion -->
+                    <!-- BEGIN promotion -->
+                    <div class="promotion bg-black">
+                        <div class="promotion-image text-right">
+                            <img src="{% static 'products/img/mac-pro.png' %}" alt=""/>
+                        </div>
+                        <div class="promotion-caption promotion-caption-inverse">
+                            <h4 class="promotion-title">Mac Pro</h4>
+                            <div class="promotion-price">
+                                <small>from</small>
+                                $1,299.00
+                            </div>
+                            <p class="promotion-desc">Built for creativity on an epic scale.</p>
+                            <a href="#" class="promotion-btn">View More</a>
+                        </div>
+                    </div>
+                    <!-- END promotion -->
+                </div>
+                <!-- END col-3 -->
+            </div>
+            <!-- END row -->
+        </div>
+        <!-- END container -->
+    </div>
+    <!-- END #promotions -->
+
+    <!-- BEGIN #trending-items -->
+    <div id="trending-items" class="section-container bg-silver">
+    <!-- BEGIN container -->
+    <div class="container">
+        <!-- BEGIN section-title -->
+        <h4 class="section-title clearfix">
+            <a href="#" class="pull-right m-l-5"><i class="fa fa-angle-right f-s-18"></i></a>
+            <a href="#" class="pull-right"><i class="fa fa-angle-left f-s-18"></i></a>
+            Trending Items
+            <small>Shop and get your favourite items at amazing prices!</small>
+        </h4>
+        <!-- END section-title -->
+
+        <!-- BEGIN row -->
+        <div class="row row-space-10">
+            <!-- BEGIN col-2 -->
+            {% for p in products %}
+                <div class="col-md-2 col-sm-4">
+                    <!-- BEGIN item -->
+                    <div class="item item-thumbnail">
+
+                        <a href="{% url "products:product_detail" pk=p.pk %}" class="item-image">
+                            <img src="{% get_media_prefix %}{{ p.product_image }}" alt=""/>
+                            <div class="discount">{{ p|calculate_discount }} OFF</div>
+                        </a>
+                        <div class="item-info">
+                            <h4 class="item-title"><a href="{% url "products:product_detail" pk=p.pk %}">
+                                {{ p.product_name }}<br/>16GB</a></h4>
+                            <p class="item-desc">{{ p.product_Description }}</p>
+                            <div class="item-price">{{ p|discounted_price }}</div>
+                            <div class="item-discount-price">{{ p.product_price }}</div>
+                        </div>
+                    </div>
+                    <!-- END item -->
+                </div>
+            {% endfor %}
+            <!-- END col-2 -->
+
+            <!-- END row -->
+        </div>
+        <!-- END container -->
+    </div>
+    <!-- END #trending-items -->
+    <br/><br/>{{ categorized_products.objects.all }}<br/><br/>
+
+    <!-- BEGIN #mobile-list -->
+    <div id="mobile-list" class="section-container bg-silver p-t-0">
+        <!-- BEGIN container -->
+        <div class="container">
+            <!-- BEGIN section-title -->
+            <h4 class="section-title clearfix">
+                <a href="#" class="pull-right">SHOW ALL</a>
+                Mobile Phones
+                <small>Shop and get your favourite phone at amazing prices!</small>
+            </h4>
+            <!-- END section-title -->
+            <!-- BEGIN category-container -->
+            <div class="category-container">
+                <!-- BEGIN category-sidebar -->
+                <div class="category-sidebar">
+                    <ul class="category-list">
+                        <li class="list-header">Top Categories</li>
+                        {% for i in companies %}
+                            <li><a data-name="{{ i.company_name }}"
+                                   onclick="get_products(this)">{{ i.company_name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!-- END category-sidebar -->
+                <!-- BEGIN category-detail -->
+                <div class="category-detail">
+                    <!-- BEGIN category-item -->
+                    <a href="#" class="category-item full">
+                        <div class="item">
+                            <div class="item-cover">
+                                <img src="{% static 'products/img/samsung-s7-edge.jpg' %}" alt=""/>
+                            </div>
+                            <div class="item-info bottom">
+                                <h4 class="item-title">Samsung Galaxy s7 Edge + Geat 360 + Gear VR</h4>
+                                <p class="item-desc">Redefine what a phone can do</p>
+                                <div class="item-price">$799.00</div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END category-item -->
+                    <!-- BEGIN category-item -->
+                    <div class="category-item list">
+                        <!-- BEGIN item-row -->
+                        <div id="product_container" class="item-row">
+                            {% for p in products %}
+                                <div class="item item-thumbnail">
+                                    <a href="{% url "products:product_detail" pk=p.pk %}" class="item-image">
+                                        <img src="{% get_media_prefix %}{{ p.product_image }}" alt=""/>
+                                        <div class="discount">{{ p|calculate_discount }} OFF</div>
+                                    </a>
+                                    <div class="item-info">
+                                        <h4 class="item-title"><a href="{% url "products:product_detail" pk=p.pk %}">
+                                         {{ p.product_name }}<br></a></h4>
+                                        <p>{{ p.product_Description }}</p>
+                                        <div class="item-price">{{ p|discounted_price }}</div>
+                                        <div class="item-discount-price">{{ p.product_price }}</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                        <!-- END item-row -->
+                    </div>
+                    <!-- END category-item -->
+                </div>
+                <!-- END category-detail -->
+            </div>
+            <!-- END category-container -->
+        </div>
+        <!-- END container -->
+    </div>
+    <!-- END #mobile-list -->
+
+    <!-- BEGIN #tablet-list -->
+    <div id="tablet-list" class="section-container bg-silver p-t-0">
+        <!-- BEGIN container -->
+        <div class="container">
+            <!-- BEGIN section-title -->
+            <h4 class="section-title clearfix">
+                <a href="#" class="pull-right">SHOW ALL</a>
+                Tablet
+                <small>Shop and get your favourite tablet at amazing prices!</small>
+            </h4>
+            <!-- END section-title -->
+            <!-- BEGIN category-container -->
+            <div class="category-container">
+                <!-- BEGIN category-sidebar -->
+                <div class="category-sidebar">
+                    <ul class="category-list">
+                        <li class="list-header">Top Categories</li>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">HP</a></li>
+                        <li><a href="#">Huawei</a></li>
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">Sony</a></li>
+                        <li><a href="#">All Brands</a></li>
+                    </ul>
+                </div>
+                <!-- END category-sidebar -->
+                <!-- BEGIN category-detail -->
+                <div class="category-detail">
+                    <!-- BEGIN category-item -->
+                    <a href="#" class="category-item full">
+                        <div class="item">
+                            <div class="item-cover">
+                                <img src="{% static 'products/img/huawei-mediapad.jpg' %}" alt=""/>
+                            </div>
+                            <div class="item-info bottom">
+                                <h4 class="item-title">Huawei MediaPad T1 7.0</h4>
+                                <p class="item-desc">Vibrant colors. Beautifully displayed</p>
+                                <div class="item-price">$299.00</div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- END category-item -->
+                    <!-- BEGIN category-item -->
+                    <div class="category-item list">
+                        <!-- BEGIN item-row -->
+                        <div class="item-row">
+                            <!-- BEGIN item -->
+                            <div class="item item-thumbnail">
+                                <a href="product_detail.html" class="item-image">
+                                    <img src="{% static 'products/img/ipad-pro.png' %}" alt=""/>
+                                    <div class="discount">15% OFF</div>
+                                </a>
+                                <div class="item-info">
+                                    <h4 class="item-title">
+                                        <a href="product_detail.html">9.7-inch iPad Pro<br/>32GB</a>
+                                    </h4>
+                                    <p class="item-desc">3D Touch. 12MP photos. 4K video.</p>
+                                    <div class="item-price">$649.00</div>
+                                    <div class="item-discount-price">$739.00</div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+                            <!-- BEGIN item -->
+                            <div class="item item-thumbnail">
+                                <a href="product_detail.html" class="item-image">
+                                    <img src="{% static 'products/img/galaxy-tab2.png' %}" alt=""/>
+                                    <div class="discount">32% OFF</div>
+                                </a>
+                                <div class="item-info">
+                                    <h4 class="item-title">
+                                        <a href="product.html">Samsung Galaxy Tab S2<br/>Black</a>
+                                    </h4>
+                                    <p class="item-desc">A Brilliant Screen That Adjusts to You</p>
+                                    <div class="item-price">$399.99</div>
+                                    <div class="item-discount-price">$499.00</div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+                            <!-- BEGIN item -->
+                            <div class="item item-thumbnail">
+                                <a href="product_detail.html" class="item-image">
+                                    <img src="{% static 'products/img/galaxy-taba.png' %}" alt=""/>
+                                    <div class="discount">20% OFF</div>
+                                </a>
+                                <div class="item-info">
+                                    <h4 class="item-title">
+                                        <a href="product.html">Samsung Galaxy Tab A<br/>9.7" 16Gb(Wi-Fi)</a>
+                                    </h4>
+                                    <p class="item-desc">Keep All Your Samsung Devices In Sync</p>
+                                    <div class="item-price">$349.99</div>
+                                    <div class="item-discount-price">$399.99</div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+                        </div>
+                        <!-- END item-row -->
+                        <!-- BEGIN item-row -->
+                        <div class="item-row">
+                            <!-- BEGIN item -->
+                            <div class="item item-thumbnail">
+                                <a href="product_detail.html" class="item-image">
+                                    <img src="{% static 'products/img/hp-spectrex2.png' %}" alt=""/>
+                                    <div class="discount">15% OFF</div>
+                                </a>
+                                <div class="item-info">
+                                    <h4 class="item-title">
+                                        <a href="product_detail.html">HP Spectre x2<br/>‏12-a011nr</a>
+                                    </h4>
+                                    <p class="item-desc">Our thinnest detachable separates from all others.</p>
+                                    <div class="item-price">$799.99</div>
+                                    <div class="item-discount-price">$850.00</div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+                            <!-- BEGIN item -->
+                            <div class="item item-thumbnail">
+                                <a href="product_detail.html" class="item-image">
+                                    <img src="{% static 'products/img/xperia-z2.png' %}" alt=""/>
+                                    <div class="discount">32% OFF</div>
+                                </a>
+                                <div class="item-info">
+                                    <h4 class="item-title">
+                                        <a href="product.html">Sony Xperia Z2 Tablet<br/>Black Color</a>
+                                    </h4>
+                                    <p class="item-desc">For unexpectedly beautiful moments</p>
+                                    <div class="item-price">$199.00</div>
+                                    <div class="item-discount-price">$259.00</div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+                            <!-- BEGIN item -->
+                            <div class="item item-thumbnail">
+                                <a href="product_detail.html" class="item-image">
+                                    <img src="{% static 'products/img/ipad-air.png' %}" alt=""/>
+                                    <div class="discount">20% OFF</div>
+                                </a>
+                                <div class="item-info">
+                                    <h4 class="item-title">
+                                        <a href="product.html">iPad Air 2<br/>32/64Gb</a>
+                                    </h4>
+                                    <p class="item-desc">Light. Heavyweight.</p>
+                                    <div class="item-price">$399.00</div>
+                                    <div class="item-discount-price">$459.00</div>
+                                </div>
+                            </div>
+                            <!-- END item -->
+                        </div>
+                        <!-- END item-row -->
+                    </div>
+                    <!-- END category-item -->
+                </div>
+                <!-- END category-detail -->
+            </div>
+            <!-- END category-container -->
+        </div>
+        <!-- END container -->
+    </div>
+    <!-- END #tablet-list -->
+
+    <!-- BEGIN #policy -->
+    <div id="policy" class="section-container p-t-30 p-b-30">
+        <!-- BEGIN container -->
+        <div class="container">
+            <!-- BEGIN row -->
+            <div class="row">
+                <!-- BEGIN col-4 -->
+                <div class="col-md-4 col-sm-4">
+                    <!-- BEGIN policy -->
+                    <div class="policy">
+                        <div class="policy-icon"><i class="fa fa-truck"></i></div>
+                        <div class="policy-info">
+                            <h4>Free Delivery Over $100</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <!-- END policy -->
+                </div>
+                <!-- END col-4 -->
+                <!-- BEGIN col-4 -->
+                <div class="col-md-4 col-sm-4">
+                    <!-- BEGIN policy -->
+                    <div class="policy">
+                        <div class="policy-icon"><i class="fa fa-shield"></i></div>
+                        <div class="policy-info">
+                            <h4>1 Year Warranty For Phones</h4>
+                            <p>Cras laoreet urna id dui malesuada gravida. <br/>Duis a lobortis dui.</p>
+                        </div>
+                    </div>
+                    <!-- END policy -->
+                </div>
+                <!-- END col-4 -->
+                <!-- BEGIN col-4 -->
+                <div class="col-md-4 col-sm-4">
+                    <!-- BEGIN policy -->
+                    <div class="policy">
+                        <div class="policy-icon"><i class="fa fa-user-md"></i></div>
+                        <div class="policy-info">
+                            <h4>6 Month Warranty For Accessories</h4>
+                            <p>Fusce ut euismod orci. Morbi auctor, sapien non eleifend iaculis.</p>
+                        </div>
+                    </div>
+                    <!-- END policy -->
+                </div>
+                <!-- END col-4 -->
+            </div>
+            <!-- END row -->
+        </div>
+        <!-- END container -->
+    </div>
+    <!-- END #policy -->
+
+    <!-- BEGIN #subscribe -->
+    <div id="subscribe" class="section-container bg-silver p-t-30 p-b-30">
+        <div class="container">
+            <!-- BEGIN row -->
+            <div class="row">
+                <!-- BEGIN col-6 -->
+                <div class="col-md-6 col-sm-6">
+                    <!-- BEGIN subscription -->
+                    <div class="subscription">
+                        <div class="subscription-intro">
+                            <h4> LET'S STAY IN TOUCH</h4>
+                            <p>Get updates on sales specials and more</p>
+                        </div>
+                        <div class="subscription-form">
+                            <form name="subscription_form" action="index.html" method="POST">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="email"
+                                           placeholder="Enter Email Address"/>
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-inverse"><i class="fa fa-angle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END subscription -->
+                </div>
+                <!-- END col-6 -->
+                <!-- BEGIN col-6 -->
+                <div class="col-md-6 col-sm-6">
+                    <!-- BEGIN social -->
+                    <div class="social">
+                        <div class="social-intro">
+                            <h4>FOLLOW US</h4>
+                            <p>We want to hear from you!</p>
+                        </div>
+                        <div class="social-list">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                    </div>
+                    <!-- END social -->
+                </div>
+                <!-- END col-6 -->
+            </div>
+            <!-- END row -->
+        </div>
+        <!-- END container -->
+    </div>
+    <!-- BEGIN container -->
+    <!-- END #subscribe -->
+
+
+{% endblock %}
+
+{% block javascriptload %}
+    <script>
+        function get_products(ref) {
+            var name = $(ref).attr('data-name');
+            $.ajax({
+                url: "{% url 'products:get-products' %}",
+                type: 'POST',
+                data: {"name": name},
+            }).done(function (res) {
+                let products = JSON.parse(res);
+                console.log(products);
+                let html = '';
+                $.each(products, function (i, e) {
+                    let product = e.fields;
+                    let template = `
+                <div class="item item-thumbnail">
+                    <a href="/products/${e.pk}/" class="item-image">
+                        <img src="/media/${product.product_image}" alt=""/>
+                        <div class="discount">${((product.product_discount) * 100 / product.product_price).toFixed(1)} % OFF</div>
+                    </a>
+                    <div class="item-info">
+                       <h4 class="item-title"><a href="/products/${e.pk}/">${product.product_name}<br/>16GB</a></h4>
+                       <p class="item-desc">${product.product_Description}</p>
+                       <div class="item-price">${ product.product_price - product.product_discount }</div>
+                            <div class="item-discount-price">${product.product_price}</div>
+                        </div>
+                    </div>`;
+                    html += template;
+                });
+                $('#product_container').html(html);
+            });
+        }
+
+    </script>
+{% endblock %}
