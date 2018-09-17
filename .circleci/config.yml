@@ -1,73 +1,56 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
 version: 2
 jobs:
   build:
     docker:
-      # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
-      - image: circleci/golang:1.8-jessie
-      # CircleCI PostgreSQL images available at: https://hub.docker.com/r/circleci/postgres/
-      - image: circleci/postgres:9.6-alpine
-        environment:
-          POSTGRES_USER: circleci-demo-go
-          POSTGRES_DB: circle_test
+      # specify the version you desire here
+      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+      - image: circleci/python:3.6.1
+      
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/postgres:9.4
 
-    working_directory: /go/src/github.com/CircleCI-Public/circleci-demo-go
-
-    environment:
-      TEST_RESULTS: /tmp/test-results
+    working_directory: ~/repo
 
     steps:
       - checkout
-      - run: mkdir -p $TEST_RESULTS
 
+      # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-pkg-cache
-
-      # Normally, this step would be in a custom primary image;
-      # we've added it here for the sake of explanation.
-      - run: go get github.com/lib/pq
-      - run: go get github.com/mattes/migrate
-      - run: go get github.com/jstemmer/go-junit-report
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
 
       - run:
-          name: Waiting for Postgres to be ready
+          name: install dependencies
           command: |
-            for i in `seq 1 10`;
-            do
-              nc -z localhost 5432 && echo Success && exit 0
-              echo -n .
-              sleep 1
-            done
-            echo Failed waiting for Postgres && exit 1
-      - run:
-          name: Run unit tests
-          environment:
-            CONTACTS_DB_URL: "postgres://circleci-demo-go@localhost:5432/circle_test?sslmode=disable"
-            CONTACTS_DB_MIGRATIONS: /go/src/github.com/CircleCI-Public/circleci-demo-go/db/migrations
-          command: |
-            trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
 
       - save_cache:
-          key: v1-pkg-cache
           paths:
-            - "/go/pkg"
-
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+        
+      # run tests!
+      # this example uses Django's built-in test-runner
+      # other common Python testing frameworks include pytest and nose
+      # https://pytest.org
+      # https://nose.readthedocs.io
       - run:
-          name: Start service
-          environment:
-            CONTACTS_DB_URL: "postgres://circleci-demo-go@localhost:5432/circle_test?sslmode=disable"
-            CONTACTS_DB_MIGRATIONS: /go/src/github.com/CircleCI-Public/circleci-demo-go/db/migrations
-          command: ./workdir/contacts
-          background: true
-
-      - run:
-          name: Validate service is working
+          name: run tests
           command: |
-            sleep 5
-            curl --retry 10 --retry-delay 1 -X POST --header "Content-Type: application/json" -d '{"email":"test@example.com","name":"Test User"}' http://localhost:8080/contacts
-      - store_artifacts:
-          path: /tmp/test-results
-          destination: raw-test-output
+            . venv/bin/activate
+            python manage.py test
 
-      - store_test_results:
-          path: /tmp/test-results
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
+          
