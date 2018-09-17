@@ -22,13 +22,13 @@ jobs:
     working_directory: ~/repo
     environment:
       TEST_RESULTS: /tmp/test-results
-      steps:
-        - checkout
-        - run: 
-            mkdir -p $TEST_RESULTS
-        - restore_cache:
-            keys:
-              - v1-pkg-cache
+    steps:
+      - checkout
+      - run:
+          mkdir -p $TEST_RESULTS
+      - restore_cache:
+          keys:
+            - v1-pkg-cache
       - run:
           name: Waiting for Postgres to be ready
           command: |
@@ -38,43 +38,32 @@ jobs:
               echo -n .
               sleep 1
             done
-            echo Failed waiting for Postgres && exit 1            
+            echo Failed waiting for Postgres && exit 1
       - run:
           name: Run unit tests
           environment:
             CONTACTS_DB_URL: "postgres://circleci-demo-go@localhost:5432/circle_test?sslmode=disable"
-            CONTACTS_DB_MIGRATIONS: /go/src/github.com/454647/ecommerce/tree/master/products/migrations
+            CONTACTS_DB_MIGRATIONS: /go/src/github.com/CircleCI-Public/circleci-demo-go/db/migrations
           command: |
             trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
             make test | tee ${TEST_RESULTS}/go-test.out
       - run: make
-            
-      - run:
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run:
-          name: install dependencies
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
 
       - save_cache:
+          key: v1-pkg-cache
           paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-        
-      # run tests!
-      # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
-      # https://pytest.org
-      # https://nose.readthedocs.io
+            - "/go/pkg"
+
       - run:
-        name: Validate service is working
+          name: Start service
+          environment:
+            CONTACTS_DB_URL: "postgres://circleci-demo-go@localhost:5432/circle_test?sslmode=disable"
+            CONTACTS_DB_MIGRATIONS: /go/src/github.com/CircleCI-Public/circleci-demo-go/db/migrations
+          command: ./workdir/contacts
+          background: true
+
+      - run:
+          name: Validate service is working
           command: |
             sleep 5
             curl --retry 10 --retry-delay 1 -X POST --header "Content-Type: application/json" -d '{"email":"test@example.com","name":"Test User"}' http://localhost:8080/contacts
