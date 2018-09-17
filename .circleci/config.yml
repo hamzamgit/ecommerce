@@ -29,6 +29,11 @@ jobs:
         - restore_cache:
             keys:
               - v1-pkg-cache
+              
+      - run: go get github.com/lib/pq
+      - run: go get github.com/mattes/migrate
+      - run: go get github.com/jstemmer/go-junit-report              
+
       - run:
           name: Waiting for Postgres to be ready
           command: |
