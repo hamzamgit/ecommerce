@@ -11,7 +11,6 @@ idna==2.0
 Jinja2==2.8
 jsonconfig-tool==1.5
 keyring==15.0.0
-language-selector==0.1
 louis==2.6.4
 lxml==3.5.0
 Mako==1.0.3
