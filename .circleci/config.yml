@@ -48,9 +48,9 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python manage.py test
+            python manage.py test --settings=ecommerce.test
 
       - store_artifacts:
           path: test-reports
           destination: test-reports
-          
+
