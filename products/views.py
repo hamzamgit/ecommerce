@@ -25,8 +25,10 @@ def get_products(request):
     send = ''
     if request.method != 'POST':
         return JsonResponse(None, safe=False)
-    if request.method == 'POST':
-        if request.POST['name']:
+    if request.method == 'POST' and request.POST['name']:
+        if request.POST['name'] == 'All':
+            send = ProductModel.objects.all()
+        else:
             send = ProductModel.objects.filter(product_company__company_name=request.POST['name'])[:6]
         data = serialize('json', send)
         return JsonResponse(data, safe=False)

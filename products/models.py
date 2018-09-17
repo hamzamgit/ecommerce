@@ -58,9 +58,18 @@ class CategoriesModel(models.Model):
         return '{}'.format(self.category_name)
 
 
+# class CompanyManager(models.Manager):
+#
+#     def get_queryset(self):
+#         return super(CompanyManager, self).get_queryset().filter(company_active=True)
+
+
 class CompanyModel(models.Model):
     company_name = models.CharField(max_length=30)
     company_active = models.BooleanField(default=True)
+
+    # objects = CompanyManager()
+
 
     def __str__(self):
         return '{}'.format(self.company_name)

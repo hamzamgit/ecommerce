@@ -51,3 +51,9 @@ class TestRatingForm(TestCase):
                           ['Select a valid choice. {} is not one of the available choices.'.format(
                               data['rating_rating'])])
 
+    def test_form_fields(self):
+        form = RatingModelForm()
+        self.assertTrue(form.fields['rating_rating'])
+        self.assertTrue(form.fields['rating_user'])
+        self.assertTrue(form.fields['rating_review'])
+        self.assertTrue(form.fields['rating_title'])

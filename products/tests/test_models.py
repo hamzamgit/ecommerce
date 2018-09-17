@@ -52,3 +52,4 @@ class TestModels(TestCase):
     def test_rating_and_review_str(self):
         rating = mommy.make(RatingAndReviewModel, rating_title='rating_title')
         self.assertEqual(rating.__str__(), 'rating_title')
+

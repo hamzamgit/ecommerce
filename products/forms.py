@@ -19,5 +19,4 @@ class RatingModelForm(forms.ModelForm):
 
     class Meta:
         model = RatingAndReviewModel
-        fields = ['rating_title', 'rating_review', 'rating_rating', 'rating_user', 'rating_time']
-        exclude = ['rating_time']
+        fields = ['rating_title', 'rating_review', 'rating_rating', 'rating_user']

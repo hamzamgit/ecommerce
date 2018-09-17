@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1a4ccdc-50e7-4248-be65-7c4bc858fbda" name="Default Changelist" comment="" />
+    <list default="true" id="b1a4ccdc-50e7-4248-be65-7c4bc858fbda" name="Default Changelist" comment="added test cases for forms, models, and views">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/templates/products/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/templates/products/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/templates/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/templates/products/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/templates/products/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/tests/test_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/tests/test_forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/tests/test_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/tests/test_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/tests/test_template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/tests/test_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ecommerce$Test__products_tests_test_views_TestGetProducts.coverage" NAME="Test: products.tests.test_views.TestGetProducts Coverage Results" MODIFIED="1536748118233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ecommerce$Test__products_tests_test_models_TestModels_test_banner_background_image.coverage" NAME="Test: products.tests.test_models.TestModels.test_banner_background_image Coverage Results" MODIFIED="1536672395094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ecommerce$Testing.coverage" NAME="Testing Coverage Results" MODIFIED="1536647427926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ecommerce$Test__products_tests_test_views_TestGetProducts_test_get_products_post_none.coverage" NAME="Test: products.tests.test_views.TestGetProducts.test_get_products_post_none Coverage Results" MODIFIED="1536747822423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -45,62 +63,75 @@
     <session id="-1631351392">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="2" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.closed" value="19" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.12" value="6" />
+          <entry key="project.open.time.13" value="5" />
+          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Django Console" value="59" />
-          <entry key="css" value="690" />
-          <entry key="html" value="4984" />
-          <entry key="js" value="1099" />
+          <entry key="Django Console" value="237" />
+          <entry key="coveragerc" value="134" />
+          <entry key="css" value="1107" />
+          <entry key="html" value="6374" />
+          <entry key="js" value="3151" />
           <entry key="less" value="27" />
-          <entry key="py" value="9780" />
+          <entry key="py" value="23189" />
+          <entry key="testmodels" value="169" />
+          <entry key="txt" value="69" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="690" />
-          <entry key="HTML" value="4984" />
-          <entry key="JavaScript" value="1099" />
+          <entry key="CSS" value="1107" />
+          <entry key="HTML" value="6374" />
+          <entry key="JavaScript" value="3151" />
           <entry key="Less" value="27" />
-          <entry key="Python" value="9839" />
+          <entry key="PLAIN_TEXT" value="203" />
+          <entry key="Python" value="23595" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="auth_user" value="2" />
-          <entry key="css" value="12" />
-          <entry key="html" value="29" />
-          <entry key="js" value="4" />
-          <entry key="less" value="2" />
+          <entry key="coveragerc" value="2" />
+          <entry key="css" value="18" />
+          <entry key="html" value="47" />
+          <entry key="js" value="9" />
+          <entry key="less" value="3" />
           <entry key="map" value="1" />
+          <entry key="md" value="1" />
           <entry key="png" value="2" />
           <entry key="products_b" value="2" />
           <entry key="products_c" value="1" />
           <entry key="products_categoriesmodel" value="1" />
           <entry key="products_productmodel" value="2" />
-          <entry key="py" value="99" />
+          <entry key="py" value="212" />
           <entry key="sql" value="1" />
+          <entry key="sqlite3" value="1" />
+          <entry key="testmodels" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="12" />
+          <entry key="CSS" value="18" />
           <entry key="Database Element" value="8" />
-          <entry key="HTML" value="29" />
+          <entry key="HTML" value="47" />
           <entry key="Image" value="2" />
-          <entry key="JavaScript" value="4" />
-          <entry key="Less" value="2" />
-          <entry key="Python" value="99" />
+          <entry key="JavaScript" value="9" />
+          <entry key="Less" value="3" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="213" />
           <entry key="Scratch" value="1" />
           <entry key="SourceMap" value="1" />
         </counts>
@@ -110,116 +141,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/templates/products/product_detail.html">
+        <entry file="file://$PROJECT_DIR$/products/tests/test_templatetags.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="47" column="69" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="69" />
+            <state relative-caret-position="139">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/views.py">
+        <entry file="file://$PROJECT_DIR$/products/tests/test_template.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="60">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
               <folding>
-                <element signature="e#0#67#0" expanded="true" />
-                <marker date="1536325156319" expanded="true" signature="392:397" ph="..." />
-                <marker date="1536325156319" expanded="true" signature="2820:2825" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/static/products/css/theme/default.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="4" selection-start-column="27" selection-end-line="1" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-                <marker date="1536327324726" expanded="true" signature="270:540" ph="..." />
+                <marker date="1537168251394" expanded="true" signature="92:97" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/products/tests/ModelTests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/static/products/js/scripts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/products/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="270">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
-                <marker date="1536323908325" expanded="true" signature="217:219" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="302:303" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="761:763" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="1742:1908" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="1907:1908" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="2650:2655" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="2868:2974" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="3027:3034" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="3094:3099" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="3166:3171" ph="..." />
-                <marker date="1536323908325" expanded="true" signature="3349:3393" ph="..." />
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1536918675789" expanded="true" signature="301:302" ph="..." />
+                <marker date="1536918675789" expanded="true" signature="761:763" ph="..." />
+                <marker date="1536918675789" expanded="true" signature="1206:1209" ph="..." />
+                <marker date="1536918675789" expanded="true" signature="1597:1654" ph="..." />
+                <marker date="1536918675789" expanded="true" signature="1615:1616" ph="..." />
+                <marker date="1536918675789" expanded="true" signature="2145:2147" ph="..." />
+                <marker date="1536918675789" expanded="true" signature="2180:2394" ph="..." />
+                <marker date="1536918675789" expanded="true" signature="2393:2394" ph="..." />
+                <marker date="1536918675789" expanded="true" signature="3151:3158" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecommerce/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" selection-start-line="54" selection-start-column="8" selection-end-line="55" />
             </state>
           </provider>
         </entry>
@@ -229,47 +187,48 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>product_container</find>
-      <find>reverse</find>
-      <find>for</find>
-      <find>filter</find>
-      <find>class=&quot;text-danger&quot;&gt;</find>
-      <find>fa fa-star checked</find>
-      <find>get</find>
-      <find>get_media</find>
-      <find>header-log</find>
-      <find>review-rate</find>
-      <find>|</find>
-      <find>ratin</find>
-      <find>pull</find>
-      <find>products</find>
-      <find>company</find>
-      <find>category</find>
-      <find>manager</find>
-      <find>def Manager</find>
-      <find>get_</find>
-      <find>class Model</find>
-      <find>class Manager</find>
-      <find>Manager</find>
-      <find>get_queryset</find>
-      <find>proxy</find>
-      <find>form</find>
-      <find>form</find>
-      <find>product</find>
-      <find>product_detail</find>
+      <find>product-revi</find>
+      <find>#product-revi</find>
+      <find>focus</find>
+      <find>title</find>
+      <find>rating_error</find>
+      <find>kwargs['widget'] = widgets[f.name]</find>
+      <find>banner</find>
       <find>rating_rating</find>
-      <find>submit</find>
+      <find>validate</find>
+      <find>java</find>
+      <find>attr</find>
+      <find>NO</find>
+      <find>att</find>
+      <find>novalidate</find>
+      <find>rating</find>
+      <find>raise</find>
+      <find>None</find>
+      <find>http_method_names</find>
+      <find>client</find>
+      <find>detail</find>
+      <find>image</find>
+      <find>static</find>
+      <find>DoesNotE</find>
+      <find>product-desc</find>
+      <find>tab-pane fade active in</find>
+      <find>review-name</find>
+      <find>responce</find>
+      <find>form</find>
+      <find>typeErro</find>
+      <find>read</find>
     </findStrings>
     <replaceStrings>
       <replace>product</replace>
+      <replace>response</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -278,29 +237,38 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/products/static/products/css/checkout.css" />
         <option value="$PROJECT_DIR$/products/migrations/0004_auto_20180831_1336.py" />
         <option value="$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/query.py" />
         <option value="$PROJECT_DIR$/products/migrations/0015_auto_20180904_0832.py" />
         <option value="$PROJECT_DIR$/products/tests.py" />
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/products/static/products/less/bootstrap/type.less" />
-        <option value="$PROJECT_DIR$/products/static/products/css/style.css" />
-        <option value="$PROJECT_DIR$/products/urls.py" />
         <option value="$PROJECT_DIR$/ecommerce/urls.py" />
-        <option value="$PROJECT_DIR$/products/templates/products/base.html" />
-        <option value="$PROJECT_DIR$/products/templatetags/extras.py" />
         <option value="$PROJECT_DIR$/ecommerce/settings.py" />
         <option value="$PROJECT_DIR$/products/admin.py" />
         <option value="$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/manager.py" />
-        <option value="$PROJECT_DIR$/products/templates/products/index.html" />
-        <option value="$PROJECT_DIR$/products/static/products/css/theme/default.css" />
-        <option value="$PROJECT_DIR$/products/static/products/js/scripts.js" />
-        <option value="$PROJECT_DIR$/products/templates/products/product_detail.html" />
-        <option value="$PROJECT_DIR$/products/models.py" />
-        <option value="$PROJECT_DIR$/products/views.py" />
-        <option value="$PROJECT_DIR$/products/forms.py" />
         <option value="$PROJECT_DIR$/products/tests/ModelTests.py" />
+        <option value="$PROJECT_DIR$/products/test.py" />
+        <option value="$PROJECT_DIR$/products/tests/testmodels" />
+        <option value="$PROJECT_DIR$/products/static/products/js/scripts.js" />
+        <option value="$PROJECT_DIR$/products/urls.py" />
+        <option value="$PROJECT_DIR$/products/static/products/css/style.css" />
+        <option value="$PROJECT_DIR$/products/static/products/css/checkout.css" />
+        <option value="$PROJECT_DIR$/products/static/products/css/theme/default.css" />
+        <option value="$PROJECT_DIR$/products/tests/test_templatetags.py" />
+        <option value="$PROJECT_DIR$/.coveragerc" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/products/templatetags/extras.py" />
+        <option value="$PROJECT_DIR$/products/tests/test_models.py" />
+        <option value="$PROJECT_DIR$/products/templates/products/product_detail.html" />
+        <option value="$PROJECT_DIR$/products/forms.py" />
+        <option value="$PROJECT_DIR$/products/templates/products/base.html" />
+        <option value="$PROJECT_DIR$/products/templates/products/index.html" />
+        <option value="$PROJECT_DIR$/products/tests/test_forms.py" />
+        <option value="$PROJECT_DIR$/products/views.py" />
+        <option value="$PROJECT_DIR$/products/models.py" />
+        <option value="$PROJECT_DIR$/products/tests/test_views.py" />
+        <option value="$PROJECT_DIR$/products/tests/test_template.py" />
       </list>
     </option>
   </component>
@@ -316,17 +284,20 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="683" />
-    <option name="y" value="-3" />
-    <option name="width" value="683" />
-    <option name="height" value="738" />
+    <option name="x" value="142" />
+    <option name="y" value="36" />
+    <option name="width" value="1356" />
+    <option name="height" value="723" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <showMembers ProjectPane="true" />
+      <autoscrollToSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,29 +310,10 @@
               <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
               <item name="products" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ecommerce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ecommerce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ecommerce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ecommerce" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,8 +328,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/products/static/products" />
       <recent name="$PROJECT_DIR$/products/templates/products" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/products/static/products" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -392,7 +345,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django server.Unnamed">
+    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server">
+      <module name="ecommerce" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ecommerce.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/venvs/ecommerce/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="products.tests.test_views" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="true" />
+      <option name="customRunCommand" value="test" />
+      <method v="2" />
+    </configuration>
     <configuration name="ecommerce" type="Python.DjangoServer" factoryName="Django server">
       <module name="ecommerce" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -417,6 +393,10 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django server.Unnamed" />
+      <item itemvalue="Django server.ecommerce" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -429,29 +409,78 @@
       <option name="presentableId" value="Default" />
       <updated>1535698829960</updated>
     </task>
+    <task id="LOCAL-00001" summary="added test cases for forms, models, and views">
+      <created>1536844308325</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536844308326</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Testing - 2018.09.11 at 11h 29m 57s.xml">
+      <configuration name="Testing" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Testing - 2018.09.11 at 11h 30m 16s.xml">
+      <configuration name="Testing" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Testing - 2018.09.11 at 11h 30m 29s.xml">
+      <configuration name="Testing" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__products_tests_test_models_TestModels_test_banner_background_image - 2018.09.11 at 18h 25m 59s.xml">
+      <configuration name="Test: products.tests.test_models.TestModels.test_banner_background_image" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__products_tests_test_models_TestModels_test_banner_background_image - 2018.09.11 at 18h 26m 06s.xml">
+      <configuration name="Test: products.tests.test_models.TestModels.test_banner_background_image" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__products_tests_test_models_TestModels_test_banner_background_image - 2018.09.11 at 18h 26m 17s.xml">
+      <configuration name="Test: products.tests.test_models.TestModels.test_banner_background_image" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__products_tests_test_models_TestModels_test_banner_background_image - 2018.09.11 at 18h 26m 37s.xml">
+      <configuration name="Test: products.tests.test_models.TestModels.test_banner_background_image" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__products_tests_test_views_TestGetProducts_test_get_products_post_none - 2018.09.12 at 15h 23m 17s.xml">
+      <configuration name="Test: products.tests.test_views.TestGetProducts.test_get_products_post_none" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__products_tests_test_views_TestGetProducts - 2018.09.12 at 15h 26m 10s.xml">
+      <configuration name="Test: products.tests.test_views.TestGetProducts" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+    <history-entry file="Test__products_tests_test_views_TestGetProducts - 2018.09.12 at 15h 30m 44s.xml">
+      <configuration name="Test: products.tests.test_views.TestGetProducts" configurationId="DjangoTestsConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-17" width="1368" height="753" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16114458" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25527108" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4265403" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44707742" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.328594" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49924698" weight="0.4186414" />
+      <window_info anchor="bottom" id="Find" order="3" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.328594" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3266564" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.33333334" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32543445" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.500753" side_tool="true" weight="0.44391784" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924698" visible="true" weight="0.26698261" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3270142" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.328594" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49924698" weight="0.44865718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -459,23 +488,24 @@
       <window_info anchor="right" id="Database" order="4" weight="0.2916042" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16114458" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25527108" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4265403" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44707742" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3266564" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.33333334" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3270142" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.328594" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.328594" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924698" weight="0.44865718" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924698" weight="0.4186414" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.328594" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32543445" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.500753" side_tool="true" weight="0.44391784" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49924698" visible="true" weight="0.26698261" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.3270142" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.328594" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -489,20 +519,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added test cases for forms, models, and views" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test cases for forms, models, and views" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/products/views.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/products/views.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -513,59 +538,54 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
-        <watch expression="model" language="Python" />
+        <watch expression="response.content" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>model</expression-string>
+        <expression-string>response.content</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>discount</expression-string>
+        <expression-string>json.loads(response.content)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>str(form.fields['rating_rating'])</expression-string>
+        <expression-string>self.assertEqual(json.load(response.content), serializers.serialize('json', ProductModel.objects.all()))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>form.fields['rating_rating']</expression-string>
+        <expression-string>response</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>form</expression-string>
-        <language-id>HTML</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>form)</expression-string>
-        <language-id>HTML</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>form.rating_rating</expression-string>
-        <language-id>HTML</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>request.POST['name']</expression-string>
+        <expression-string>json.dump(response)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.method</expression-string>
+        <expression-string>json.loads(response)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>p.product_review</expression-string>
+        <expression-string>response.content_type</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.assertEqual(response, ProductModel.objects.all())</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.assertEqual(json.load(response), ProductModel.objects.all())</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -582,339 +602,365 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>responce</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/forms/forms.py">
+    <entry file="file://$PROJECT_DIR$/products/static/products/css/theme/default.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="40" selection-start-line="40" selection-end-line="48" />
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/model_mommy/mommy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4606">
+          <caret line="137" column="29" lean-forward="true" selection-start-line="137" selection-start-column="29" selection-end-line="137" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/forms/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="332" column="35" selection-start-line="332" selection-start-column="35" selection-end-line="332" selection-end-column="35" />
+        <state relative-caret-position="-1430">
+          <caret line="448" selection-start-line="448" selection-end-line="448" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/views/generic/edit.py">
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/template/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="207" column="54" selection-start-line="207" selection-start-column="48" selection-end-line="207" selection-end-column="54" />
+        <state relative-caret-position="119">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products/migrations/0015_auto_20180904_0832.py" />
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/views/decorators/csrf.py">
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/utils/deprecation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="484">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.5/json/__init__.py">
+    <entry file="file:///usr/lib/python3.5/contextlib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="118" column="16" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="56" lean-forward="true" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/tests.py" />
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/core/management/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="230" column="56" lean-forward="true" selection-start-line="230" selection-start-column="56" selection-end-line="230" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6420fcda-d16a-4509-97db-3feb31fcb2a7/schema/main/table/products_b" />
-    <entry file="das://6420fcda-d16a-4509-97db-3feb31fcb2a7/schema/main/table/products_c" />
-    <entry file="file://$PROJECT_DIR$/products/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://6420fcda-d16a-4509-97db-3feb31fcb2a7/schema/main/table/products_productmodel">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5400">
-          <caret line="384" column="8" selection-start-line="384" selection-start-column="8" selection-end-line="384" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/views/generic/detail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/http/response.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="529" column="6" selection-start-line="529" selection-start-column="6" selection-end-line="529" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/conf/urls/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/static/products/less/bootstrap/type.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="306" column="20" selection-start-line="306" selection-start-column="20" selection-end-line="306" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/static/products/css/._animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/products/mac-mini.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/products/slider-2-product.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecommerce/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/static/products/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="3832" column="1" selection-start-line="3832" selection-start-column="1" selection-end-line="3832" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1433611585/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1957">
-          <caret line="4124" column="8" selection-start-line="4124" selection-start-column="8" selection-end-line="4124" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/templates/products/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/template/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13290">
-          <caret line="903" selection-start-line="903" selection-end-line="903" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/template/defaulttags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="187" selection-start-line="187" selection-end-line="187" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/apps/registry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="381" column="7" selection-start-line="381" selection-start-column="7" selection-end-line="381" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/migrations/0017_auto_20180906_0621.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/migrations/0014_auto_20180903_1424.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/migrations/0015_auto_20180904_1003.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/migrations/0018_auto_20180906_1417.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/migrations/0016_b_c.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/templates/products/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="554" column="29" lean-forward="true" selection-start-line="554" selection-start-column="29" selection-end-line="554" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" column="20" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecommerce/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" selection-start-line="54" selection-start-column="8" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1536323908325" expanded="true" signature="217:219" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="302:303" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="761:763" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="1742:1908" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="1907:1908" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="2650:2655" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="2868:2974" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="3027:3034" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="3094:3099" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="3166:3171" ph="..." />
-            <marker date="1536323908325" expanded="true" signature="3349:3393" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/static/products/js/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-column="27" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/static/products/css/theme/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/templatetags/extras.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" lean-forward="true" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/shortcuts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="83" column="7" lean-forward="true" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
+        <state relative-caret-position="278">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/products/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="135">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/core/handlers/exception.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.5/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="647" selection-start-line="647" selection-end-line="647" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/views/generic/edit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.coveragerc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/test/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="338" selection-start-line="338" selection-end-line="338" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/templatetags/extras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1536833392801" expanded="true" signature="757:762" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products/views.py">
+    <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-            <marker date="1536325156319" expanded="true" signature="392:397" ph="..." />
-            <marker date="1536325156319" expanded="true" signature="2820:2825" ph="..." />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products/templates/products/product_detail.html">
+    <entry file="file://$PROJECT_DIR$/products/static/products/less/_responsive.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="47" column="69" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="69" />
+        <state relative-caret-position="116">
+          <caret line="310" column="31" selection-start-line="310" selection-start-column="31" selection-end-line="310" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/migrations/0003_auto_20180831_1226.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/migrations/0004_auto_20180831_1336.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/migrations/0006_productmodel_product_review.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/migrations/0005_ratingandreviewmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/migrations/0002_auto_20180831_1042.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.5/copy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4125">
+          <caret line="278" selection-start-line="278" selection-end-line="278" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="280" column="39" selection-start-line="280" selection-start-column="39" selection-end-line="280" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="248" column="14" selection-start-line="248" selection-start-column="14" selection-end-line="248" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/contrib/gis/db/backends/mysql/schema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/fields/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="736" column="29" selection-start-line="736" selection-start-column="29" selection-end-line="736" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.5/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/1433611585/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="4725" selection-start-line="4725" selection-end-line="4725" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/templates/products/indexbackup.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/tests/test_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/products/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="315">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
-            <marker date="1536327324726" expanded="true" signature="270:540" ph="..." />
+            <marker date="1536904707579" expanded="true" signature="270:577" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products/tests/ModelTests.py">
+    <entry file="file://$PROJECT_DIR$/htmlcov/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/templates/products/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="354" lean-forward="true" selection-start-line="354" selection-end-line="354" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/templates/products/index_fixed_header.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/tests/test_forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/templates/products/product_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="377" selection-start-line="377" selection-end-line="377" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/templates/products/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="254" selection-start-line="254" selection-end-line="254" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmlcov/_home_pysoft_venvs_ecommerce_lib_python3_5_site-packages_django___init___py.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecommerce/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/404.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/tests/test_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.5/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="264" column="24" selection-start-line="264" selection-start-column="20" selection-end-line="264" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venvs/ecommerce/lib/python3.5/site-packages/django/test/testcases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="717" column="31" selection-start-line="717" selection-start-column="31" selection-end-line="717" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1536914314629" expanded="true" signature="419:424" ph="..." />
+            <marker date="1536914314629" expanded="true" signature="1422:1427" ph="..." />
+            <marker date="1536914314629" expanded="true" signature="1472:1473" ph="..." />
+            <marker date="1536914314629" expanded="true" signature="1472:1481" ph="..." />
+            <marker date="1536914314629" expanded="true" signature="2796:2802" ph="..." />
+            <marker date="1536914314629" expanded="true" signature="3268:3273" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/tests/test_template.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <marker date="1537168251394" expanded="true" signature="92:97" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/tests/test_templatetags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1536918675789" expanded="true" signature="301:302" ph="..." />
+            <marker date="1536918675789" expanded="true" signature="761:763" ph="..." />
+            <marker date="1536918675789" expanded="true" signature="1206:1209" ph="..." />
+            <marker date="1536918675789" expanded="true" signature="1597:1654" ph="..." />
+            <marker date="1536918675789" expanded="true" signature="1615:1616" ph="..." />
+            <marker date="1536918675789" expanded="true" signature="2145:2147" ph="..." />
+            <marker date="1536918675789" expanded="true" signature="2180:2394" ph="..." />
+            <marker date="1536918675789" expanded="true" signature="2393:2394" ph="..." />
+            <marker date="1536918675789" expanded="true" signature="3151:3158" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

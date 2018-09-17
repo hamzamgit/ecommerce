@@ -1,9 +1,9 @@
+from django.core import serializers
 from django.urls import reverse
 from django.test import Client, TestCase
-from django.test.utils import setup_test_environment, teardown_test_environment
 from products.models import *
-from products.forms import RatingModelForm
 from model_mommy import mommy
+import json
 
 
 # teardown_test_environment()
@@ -84,6 +84,16 @@ class TestDetailView(TestCase):
         for er in response.context['form'].errors:
             self.assertEquals(response.context['form'].errors[er][0], errors[er])
 
+    def test_form_render(self):
+        p = mommy.make(ProductModel)
+        response = self.client.get(reverse('products:product_detail', args=[p.id]))
+        self.assertTemplateUsed(response, 'products/product_detail.html')
+        self.assertEquals(len(response.context['form'].fields), 4)
+        self.assertIn('rating_rating', response.context['form'].fields)
+        self.assertIn('rating_review', response.context['form'].fields)
+        self.assertIn('rating_user', response.context['form'].fields)
+        self.assertIn('rating_title', response.context['form'].fields)
+
     def test_product_detail_post_404(self):
         user = mommy.make(User)
         rating = mommy.make(RatingAndReviewModel, rating_user=user)
@@ -139,8 +149,16 @@ class TestGetProducts(TestCase):
         response = self.client.post(reverse('products:get-products'), data={'name': company.company_name})
         self.assertEqual(response.status_code, 200)
 
-    def test_get_products_post_none(self):
+    def test_get_products_post_all(self):
         company = create_company()
-        product = mommy.make(ProductModel, product_company=company)
-        response = self.client.post(reverse('products:get-products'), data={'name': None})
-        self.assertEqual(response.content, b'"[]"')
+        product = mommy.make(ProductModel, product_company=company, _quantity=5)
+        response = self.client.post(reverse('products:get-products'), data={'name': "All"})
+        self.assertEqual(json.loads(response.content.decode()), serializers.serialize('json', ProductModel.objects.all()))
+        self.assertEqual(response.status_code, 200)
+
+
+def test_get_products_post_none(self):
+    company = create_company()
+    product = mommy.make(ProductModel, product_company=company)
+    response = self.client.post(reverse('products:get-products'), data={'name': None})
+    self.assertEqual(response.content, b'"[]"')
