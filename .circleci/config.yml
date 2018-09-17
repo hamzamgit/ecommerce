@@ -15,10 +15,10 @@ jobs:
           POSTGRES_USER: circleci-demo-go
           POSTGRES_DB: circle_test
 
-    working_directory: /go/src/github.com/CircleCI-Public/circleci-demo-go
+        working_directory: /go/src/github.com/CircleCI-Public/circleci-demo-go
 
-    environment:
-      TEST_RESULTS: /tmp/test-results
+        environment:
+          TEST_RESULTS: /tmp/test-results
 
     steps:
       - checkout
@@ -78,8 +78,6 @@ jobs:
 
       - store_test_results:
           path: /tmp/test-results
-Example Ruby Project with MYSQL and Dockerize
-The following example uses MySQL and dockerize, see the sample project on Github for additional links.
 
 version: 2
 jobs:
@@ -87,11 +85,7 @@ jobs:
     working_directory: ~/test-circleci
     docker:
       - image: circleci/ruby:2.4-node-jessie
-      - image: tkuchiki/delayed-mysql
-        environment:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_ROOT_PASSWORD: ''
-          MYSQL_DATABASE: circleci
+
     steps:
       - checkout
       - run:
@@ -101,9 +95,6 @@ jobs:
           name: Wait for DB
           # preinstalled in circleci/* docker image
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
-      - run:
-          name: MySQL version
-          command: bundle exec ruby mysql_version.rb
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
