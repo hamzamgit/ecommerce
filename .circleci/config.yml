@@ -20,8 +20,8 @@ jobs:
       # - image: circleci/postgres:9.4
 
     working_directory: ~/repo
-        environment:
-          TEST_RESULTS: /tmp/test-results
+    environment:
+      TEST_RESULTS: /tmp/test-results
       steps:
         - checkout
         - run: mkdir -p $TEST_RESULTS
