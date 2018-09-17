@@ -11,6 +11,7 @@ jobs:
       - image: circleci/python:3.6.1
       - image: circleci/golang:1.8-jessie
       - image: circleci/postgres:9.6-alpine
+      
       environment:
           POSTGRES_USER: circleci-demo-go
           POSTGRES_DB: circle_test
@@ -38,11 +39,18 @@ jobs:
               echo -n .
               sleep 1
             done
-            echo Failed waiting for Postgres && exit 1
+            echo Failed waiting for Postgres && exit 1            
       - run:
-
-
-      # Download and cache dependencies
+          name: Run unit tests
+          environment:
+            CONTACTS_DB_URL: "postgres://circleci-demo-go@localhost:5432/circle_test?sslmode=disable"
+            CONTACTS_DB_MIGRATIONS: /go/src/github.com/454647/ecommerce/tree/master/products/migrations
+          command: |
+            trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
+            make test | tee ${TEST_RESULTS}/go-test.out
+      - run: make
+            
+      - run:
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "requirements.txt" }}
@@ -66,6 +74,12 @@ jobs:
       # other common Python testing frameworks include pytest and nose
       # https://pytest.org
       # https://nose.readthedocs.io
+      - run:
+        name: Validate service is working
+          command: |
+            sleep 5
+            curl --retry 10 --retry-delay 1 -X POST --header "Content-Type: application/json" -d '{"email":"test@example.com","name":"Test User"}' http://localhost:8080/contacts
+
       - run:
           name: run tests
           command: |
