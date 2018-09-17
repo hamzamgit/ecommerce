@@ -1,5 +1,5 @@
 from django.test import TestCase
-from django.db.utils import IntegrityError
+from django.db.utils import IntegrityError,DataError
 from products.models import *
 from model_mommy import mommy
 
@@ -9,7 +9,7 @@ class TestModels(TestCase):
     # BannerModel Tests
 
     def test_banner_create(self):
-        with self.assertRaises(IntegrityError):
+        with self.assertRaises(DataError):
             mommy.make(BannerModel,
                 banner_title='asldfjasldfjljweqporuqwenzlsvapsodiqpwierpqweoiraskldjfalsdnfoqiweuro')
 
